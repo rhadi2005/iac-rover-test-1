@@ -1,0 +1,45 @@
+virtual_hubs_route_tables_prod:
+  gitops:
+    caf_landingzone_branch: 2203.1
+
+  relative_destination_folder: level2/connectivity/virtual_hubs_route_tables/prod
+
+  tfstate:
+    lz_key_name: virtual_hubs_route_tables_prod
+    tfstate: connectivity_virtual_hubs_route_tables_prod.tfstate
+    workspace: tfstate
+    level: level2
+    config_file: virtual_hubs_route_tables.yaml
+    identity_aad_key: cred_connectivity
+    # Do not rename the tfstate_key_name
+    tfstate_key_name: virtual_hubs_route_tables
+
+  deployments:
+    landingzone:
+      global_settings_key:
+        platform:
+          virtual_hubs: prod
+      remote_tfstates:
+        platform:
+          virtual_hubs: prod
+          secure_firewalls: prod
+          private_dns_firewalls: prod
+
+  resources:
+    connectivity:
+      virtual_hub_route_tables:
+        egress_internet:
+          name: egress-internet
+          virtual_hub:
+            lz_key: connectivity_virtual_hubs_prod
+            key: prod
+          routes:
+            egress_internet:
+              name: egress-internet
+              destinations_type: CIDR
+              destinations:
+                - 0.0.0.0/0
+              next_hop:
+                lz_key: connectivity_secure_firewalls_prod
+                resource_type: azurerm_firewalls
+                key: fw_secure_prod

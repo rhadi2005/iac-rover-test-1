@@ -1,0 +1,40 @@
+azurerm_firewall_policies_non_prod:
+  gitops:
+    caf_landingzone_branch: 2203.1
+
+  relative_destination_folder: level2/connectivity/azurerm_firewall_policies/non_prod
+
+  tfstate:
+    lz_key_name: connectivity_firewall_policies_non_prod
+    tfstate: connectivity_firewall_policies_non_prod.tfstate
+    level: level2
+    config_file: azurerm_firewall_policies.yaml
+    identity_aad_key: cred_connectivity
+    # Do not rename the tfstate_key_name
+    tfstate_key_name: azurerm_firewall_policies
+
+  deployments:
+    landingzone:
+      global_settings_key:
+        platform:
+          virtual_wans: prod
+      remote_tfstates:
+        platform:
+          virtual_wans: prod
+
+
+  resources:
+    connectivity:
+      resource_groups:
+        firewall_policies:
+          name: connectivity-non_prod-firewall-policies
+          region_key: region1
+
+      azurerm_firewall_policies:
+        secure_root:
+          name: "secure-root-policy-non_prod"
+          region_key: region1
+          resource_group:
+            key: firewall_policies
+          threat_intelligence_mode: "Alert"
+
