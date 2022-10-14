@@ -6,11 +6,11 @@ keyvaults = {
     sku_name           = "premium"
     tags = {
       caf_tfstate     = "level0"
-      caf_environment = "vcf_launchpad"
+      caf_environment = "rha-launchpad"
     }
 
     creation_policies = {
-      // rhadi2005@rasboracafe.onmicrosoft.com
+      // rahmat.hadi@ocbps.onmicrosoft.com
       bootstrap_user = {
         object_id          = ""
         secret_permissions = ["Set", "Get", "List", "Delete", "Purge", "Recover"]
@@ -33,11 +33,11 @@ keyvaults = {
     sku_name           = "premium"
     tags = {
       caf_tfstate     = "level1"
-      caf_environment = "vcf_launchpad"
+      caf_environment = "rha-launchpad"
     }
 
     creation_policies = {
-      // rhadi2005@rasboracafe.onmicrosoft.com
+      // rahmat.hadi@ocbps.onmicrosoft.com
       bootstrap_user = {
         object_id          = ""
         secret_permissions = ["Set", "Get", "List", "Delete", "Purge", "Recover"]
@@ -60,11 +60,11 @@ keyvaults = {
     sku_name           = "premium"
     tags = {
       caf_tfstate     = "level2"
-      caf_environment = "vcf_launchpad"
+      caf_environment = "rha-launchpad"
     }
 
     creation_policies = {
-      // rhadi2005@rasboracafe.onmicrosoft.com
+      // rahmat.hadi@ocbps.onmicrosoft.com
       bootstrap_user = {
         object_id          = ""
         secret_permissions = ["Set", "Get", "List", "Delete", "Purge", "Recover"]

@@ -57,7 +57,7 @@ asvm:
           tags:
             ## Those tags must never be changed after being set as they are used by the rover to locate the launchpad and the tfstates.
             # Only adjust the environment value at creation time
-            caf_environment: vcf_launchpad
+            caf_environment: rha-launchpad
             caf_launchpad: launchpad
             caf_tfstate: level3
         level4:
@@ -77,7 +77,7 @@ asvm:
           tags:
             ## Those tags must never be changed after being set as they are used by the rover to locate the launchpad and the tfstates.
             # Only adjust the environment value at creation time
-            caf_environment: vcf_launchpad
+            caf_environment: rha-launchpad
             caf_launchpad: launchpad
             caf_tfstate: level4
 

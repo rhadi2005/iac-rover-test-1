@@ -22,7 +22,7 @@ storage_accounts = {
       }
     }
     tags = {
-      caf_environment = "vcf_launchpad"
+      caf_environment = "rha-launchpad"
       caf_launchpad   = "launchpad"
       caf_tfstate     = "level0"
     }
@@ -51,7 +51,7 @@ storage_accounts = {
       }
     }
     tags = {
-      caf_environment = "vcf_launchpad"
+      caf_environment = "rha-launchpad"
       caf_launchpad   = "launchpad"
       caf_tfstate     = "level1"
     }
@@ -80,7 +80,7 @@ storage_accounts = {
       }
     }
     tags = {
-      caf_environment = "vcf_launchpad"
+      caf_environment = "rha-launchpad"
       caf_launchpad   = "launchpad"
       caf_tfstate     = "level2"
     }

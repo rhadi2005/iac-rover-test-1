@@ -3,18 +3,18 @@
 
 ```bash
 # For manual bootstrap:
-# Login to the subscription PAYG Main Subscription with the user rhadi2005@rasboracafe.onmicrosoft.com
-rover login -t rasboracafe.onmicrosoft.com
+# Login to the subscription Subscription for OCB Professional Services with the user rahmat.hadi@ocbps.onmicrosoft.com
+rover login -t ocbps.onmicrosoft.com
 
 rover \
-  --impersonate-sp-from-keyvault-url https://vcf-kv-id-cjf.vault.azure.net/ \
+  --impersonate-sp-from-keyvault-url https://rha-kv-id-syx.vault.azure.net/ \
   -lz /tf/caf/landingzones/caf_solution \
   -var-folder /tf/caf/configuration/level0/credentials \
-  -tfstate_subscription_id a9c7991e-521c-4532-93a9-5a37f82ccaed \
-  -target_subscription a9c7991e-521c-4532-93a9-5a37f82ccaed \
+  -tfstate_subscription_id 52f4e128-3d23-4567-8900-a5c308f2284d \
+  -target_subscription 52f4e128-3d23-4567-8900-a5c308f2284d \
   -tfstate launchpad_credentials.tfstate \
   -launchpad \
-  -env vcf_launchpad \
+  -env rha-launchpad \
   -level level0 \
   -p ${TF_DATA_DIR}/launchpad_credentials.tfstate.tfplan \
   -a plan
@@ -28,14 +28,14 @@ If the plan is not successfull you need to come back to the yaml ignite.yaml, fi
 # On success plan, execute
 
 rover \
-  --impersonate-sp-from-keyvault-url https://vcf-kv-id-cjf.vault.azure.net/ \
+  --impersonate-sp-from-keyvault-url https://rha-kv-id-syx.vault.azure.net/ \
   -lz /tf/caf/landingzones/caf_solution \
   -var-folder /tf/caf/configuration/level0/credentials \
-  -tfstate_subscription_id a9c7991e-521c-4532-93a9-5a37f82ccaed \
-  -target_subscription a9c7991e-521c-4532-93a9-5a37f82ccaed \
+  -tfstate_subscription_id 52f4e128-3d23-4567-8900-a5c308f2284d \
+  -target_subscription 52f4e128-3d23-4567-8900-a5c308f2284d \
   -tfstate launchpad_credentials.tfstate \
   -launchpad \
-  -env vcf_launchpad \
+  -env rha-launchpad \
   -level level0 \
   -p ${TF_DATA_DIR}/launchpad_credentials.tfstate.tfplan \
   -a apply

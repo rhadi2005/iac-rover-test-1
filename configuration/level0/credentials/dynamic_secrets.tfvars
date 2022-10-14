@@ -14,7 +14,7 @@ dynamic_keyvault_secrets = {
     }
     tenant_id = {
       secret_name = "tenant-id"
-      value       = "482c21b6-ee9f-4d24-9bf0-6c9258fc2003" # rasboracafe.onmicrosoft.com Tenant
+      value       = "b72f77d3-93e0-4407-92fd-d336ab8e7199" # ocbps.onmicrosoft.com Tenant
     }
   }
 

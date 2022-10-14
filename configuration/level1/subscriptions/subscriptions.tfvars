@@ -13,23 +13,23 @@
 subscriptions = {
 
   launchpad = {
-    name            = "PAYG Main Subscription"
+    name            = "Subscription for OCB Professional Services"
     create_alias    = false
-    subscription_id = "a9c7991e-521c-4532-93a9-5a37f82ccaed"
+    subscription_id = "52f4e128-3d23-4567-8900-a5c308f2284d"
   }
   identity = {
-    name            = "PAYG Main Subscription"
+    name            = "Subscription for OCB Professional Services"
     create_alias    = false
-    subscription_id = "a9c7991e-521c-4532-93a9-5a37f82ccaed"
+    subscription_id = "52f4e128-3d23-4567-8900-a5c308f2284d"
   }
   connectivity = {
-    name            = "PAYG Main Subscription"
+    name            = "Subscription for OCB Professional Services"
     create_alias    = false
-    subscription_id = "a9c7991e-521c-4532-93a9-5a37f82ccaed"
+    subscription_id = "52f4e128-3d23-4567-8900-a5c308f2284d"
   }
   management = {
-    name            = "Wingtip Management Subscription"
+    name            = "Subscription for OCB Professional Services"
     create_alias    = false
-    subscription_id = "e36f933c-d6f0-4c65-a42e-270e5b267533"
+    subscription_id = "52f4e128-3d23-4567-8900-a5c308f2284d"
   }
 }

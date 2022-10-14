@@ -2,5 +2,5 @@
 library_path                    = "/tf/caf/configuration/level1/alz/vcf/lib"
 root_id                         = "vcf"
 root_name                       = "VCF-ROOT"
-deploy_core_landing_zones       = true
+deploy_core_landing_zones       = false
 reconcile_vending_subscriptions = true

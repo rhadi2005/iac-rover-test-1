@@ -11,8 +11,8 @@ role_mapping = {
         "Reader" = {
           object_ids = {
             keys = [
-              "f17f8352-7ad1-45c9-89ad-da64cec137d0", // caf_platform_maintainers
-              "bf805fd3-6be9-4f9b-b27e-bacca2efd6d0"  // subscription_creation_landingzones
+              "bfa1f1a3-76c6-4171-a185-7c535fd6bcf5", // caf_platform_maintainers
+              "30677b6f-9ce1-45d2-a213-a97297916740"  // subscription_creation_landingzones
             ]
           }
           azuread_groups = {
@@ -27,8 +27,8 @@ role_mapping = {
         "Reader" = {
           object_ids = {
             keys = [
-              "f17f8352-7ad1-45c9-89ad-da64cec137d0", // caf_platform_maintainers
-              "bf805fd3-6be9-4f9b-b27e-bacca2efd6d0"  // subscription_creation_landingzones
+              "bfa1f1a3-76c6-4171-a185-7c535fd6bcf5", // caf_platform_maintainers
+              "30677b6f-9ce1-45d2-a213-a97297916740"  // subscription_creation_landingzones
             ]
           }
           azuread_groups = {
@@ -46,15 +46,15 @@ role_mapping = {
         "Storage Blob Data Contributor" = {
           object_ids = {
             keys = [
-              "f17f8352-7ad1-45c9-89ad-da64cec137d0", // caf_platform_maintainers
-              "bf805fd3-6be9-4f9b-b27e-bacca2efd6d0"  // subscription_creation_landingzones
+              "bfa1f1a3-76c6-4171-a185-7c535fd6bcf5", // caf_platform_maintainers
+              "30677b6f-9ce1-45d2-a213-a97297916740"  // subscription_creation_landingzones
             ]
           }
         }
         "Owner" = {
           object_ids = {
             keys = [
-              "bf805fd3-6be9-4f9b-b27e-bacca2efd6d0" // subscription_creation_landingzones
+              "30677b6f-9ce1-45d2-a213-a97297916740" // subscription_creation_landingzones
             ]
           }
         }
@@ -64,15 +64,15 @@ role_mapping = {
         "Storage Blob Data Contributor" = {
           object_ids = {
             keys = [
-              "f17f8352-7ad1-45c9-89ad-da64cec137d0", // caf_platform_maintainers
-              "bf805fd3-6be9-4f9b-b27e-bacca2efd6d0"  // subscription_creation_landingzones
+              "bfa1f1a3-76c6-4171-a185-7c535fd6bcf5", // caf_platform_maintainers
+              "30677b6f-9ce1-45d2-a213-a97297916740"  // subscription_creation_landingzones
             ]
           }
         }
         "Owner" = {
           object_ids = {
             keys = [
-              "bf805fd3-6be9-4f9b-b27e-bacca2efd6d0" // subscription_creation_landingzones
+              "30677b6f-9ce1-45d2-a213-a97297916740" // subscription_creation_landingzones
             ]
           }
         }

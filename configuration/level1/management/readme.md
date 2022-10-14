@@ -7,35 +7,33 @@ Deploy the management services
 rover logout
 
 # login a with a user member of the caf-maintainers group
-rover login -t rasboracafe.onmicrosoft.com -s a9c7991e-521c-4532-93a9-5a37f82ccaed
+rover login -t ocbps.onmicrosoft.com -s 52f4e128-3d23-4567-8900-a5c308f2284d
 
 rover \
-  --impersonate-sp-from-keyvault-url https://vcf-kv-mg-fmw.vault.azure.net/ \
+  --impersonate-sp-from-keyvault-url https://rha-kv-mg-qrs.vault.azure.net/ \
   -lz /tf/caf/landingzones/caf_solution \
   -var-folder /tf/caf/configuration/level1/management \
-  -tfstate_subscription_id a9c7991e-521c-4532-93a9-5a37f82ccaed \
-  -target_subscription a9c7991e-521c-4532-93a9-5a37f82ccaed \
+  -tfstate_subscription_id 52f4e128-3d23-4567-8900-a5c308f2284d \
+  -target_subscription 52f4e128-3d23-4567-8900-a5c308f2284d \
   -tfstate management.tfstate \
-  -env vcf_launchpad \
+  -env rha-launchpad \
+  -level level1 \
+  -p ${TF_DATA_DIR}/management.tfstate.tfplan \
+  -a plan
+
+rover \
+  -lz /tf/caf/landingzones/caf_solution \
+  -var-folder /tf/caf/configuration/level1/management \
+  -tfstate_subscription_id 52f4e128-3d23-4567-8900-a5c308f2284d \
+  -target_subscription 52f4e128-3d23-4567-8900-a5c308f2284d \
+  -tfstate management.tfstate \
+  -env rha-launchpad \
   -level level1 \
   -p ${TF_DATA_DIR}/management.tfstate.tfplan \
   -a plan
 
 ```
 
-rover \
-  --impersonate-sp-from-keyvault-url https://vcf-kv-mg-fmw.vault.azure.net/ \
-  -lz /tf/caf/landingzones/caf_solution \
-  -var-folder /tf/caf/configuration/level1/management \
-  -tfstate_subscription_id a9c7991e-521c-4532-93a9-5a37f82ccaed \
-  -target_subscription e36f933c-d6f0-4c65-a42e-270e5b267533 \
-  -tfstate management.tfstate \
-  -env vcf_launchpad \
-  -level level1 \
-  -p ${TF_DATA_DIR}/management.tfstate.tfplan \
-  -a plan
-
-=====
 
 # Next steps
 

@@ -6,20 +6,20 @@ keyvaults = {
     sku_name           = "standard"
     tags = {
       caf_tfstate     = "level3"
-      caf_environment = "vcf_launchpad"
+      caf_environment = "rha-launchpad"
     }
 
     creation_policies = {
       subscription_creation_landingzones = {
-        object_id          = "bf805fd3-6be9-4f9b-b27e-bacca2efd6d0"
+        object_id          = "30677b6f-9ce1-45d2-a213-a97297916740"
         secret_permissions = ["Get"]
       }
       level0 = {
-        object_id          = "a99b48a8-685d-4674-ac72-28e16f63299b"
+        object_id          = "c2f46589-aa70-4313-84a8-208cfbbcc85c"
         secret_permissions = ["Set", "Get", "List", "Delete", "Purge", "Recover"]
       }
       caf_platform_maintainers = {
-        object_id          = "f17f8352-7ad1-45c9-89ad-da64cec137d0"
+        object_id          = "bfa1f1a3-76c6-4171-a185-7c535fd6bcf5"
         secret_permissions = ["Set", "Get", "List", "Delete", "Purge", "Recover"]
       }
     }
@@ -32,12 +32,12 @@ keyvaults = {
     sku_name           = "standard"
     tags = {
       caf_tfstate     = "level4"
-      caf_environment = "vcf_launchpad"
+      caf_environment = "rha-launchpad"
     }
 
     creation_policies = {
       subscription_creation_landingzones = {
-        object_id          = "bf805fd3-6be9-4f9b-b27e-bacca2efd6d0"
+        object_id          = "30677b6f-9ce1-45d2-a213-a97297916740"
         secret_permissions = ["Get"]
       }
       caf_ac_landingzone_maintainers_non_prod = {
@@ -49,11 +49,11 @@ keyvaults = {
         secret_permissions = ["Get"]
       }
       level0 = {
-        object_id          = "a99b48a8-685d-4674-ac72-28e16f63299b"
+        object_id          = "c2f46589-aa70-4313-84a8-208cfbbcc85c"
         secret_permissions = ["Set", "Get", "List", "Delete", "Purge", "Recover"]
       }
       caf_platform_maintainers = {
-        object_id          = "f17f8352-7ad1-45c9-89ad-da64cec137d0"
+        object_id          = "bfa1f1a3-76c6-4171-a185-7c535fd6bcf5"
         secret_permissions = ["Set", "Get", "List", "Delete", "Purge", "Recover"]
       }
     }

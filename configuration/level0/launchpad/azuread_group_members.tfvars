@@ -2,7 +2,7 @@ azuread_groups_membership = {
   caf_platform_maintainers = {
     members = {
       user_principal_names = [
-        "rhadi2005@rasboracafe.onmicrosoft.com",
+        "rahmat.hadi@ocbps.onmicrosoft.com",
       ]
     }
   }

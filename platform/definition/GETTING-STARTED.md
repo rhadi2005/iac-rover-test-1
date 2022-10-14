@@ -19,7 +19,7 @@ The best course of actions is to follow the readme files generated within each l
 Once you are ready to ingite, just run:
 
 ```bash
-rover login -t rasboracafe.onmicrosoft.com -s a9c7991e-521c-4532-93a9-5a37f82ccaed
+rover login -t ocbps.onmicrosoft.com -s 52f4e128-3d23-4567-8900-a5c308f2284d
 
 ansible-playbook /tf/caf/landingzones/templates/ansible/ansible.yaml \
   --extra-vars "@/tf/caf/platform/definition/ignite.yaml"

@@ -5,7 +5,7 @@ keyvaults = {
     sku_name                 = "standard"
     purge_protection_enabled = false
     tags = {
-      caf_environment      = "vcf_launchpad"
+      caf_environment      = "rha-launchpad"
       caf_identity_aad_key = "cred_ea_account_owner"
     }
     creation_policies = {
@@ -27,7 +27,7 @@ keyvaults = {
     sku_name                 = "standard"
     purge_protection_enabled = false
     tags = {
-      caf_environment      = "vcf_launchpad"
+      caf_environment      = "rha-launchpad"
       caf_identity_aad_key = "cred_level0"
     }
     creation_policies = {
@@ -54,7 +54,7 @@ keyvaults = {
     sku_name                 = "standard"
     purge_protection_enabled = false
     tags = {
-      caf_environment      = "vcf_launchpad"
+      caf_environment      = "rha-launchpad"
       caf_identity_aad_key = "cred_identity"
     }
     creation_policies = {
@@ -76,7 +76,7 @@ keyvaults = {
     sku_name                 = "standard"
     purge_protection_enabled = false
     tags = {
-      caf_environment      = "vcf_launchpad"
+      caf_environment      = "rha-launchpad"
       caf_identity_aad_key = "cred_management"
     }
     creation_policies = {
@@ -103,7 +103,7 @@ keyvaults = {
     sku_name                 = "standard"
     purge_protection_enabled = false
     tags = {
-      caf_environment      = "vcf_launchpad"
+      caf_environment      = "rha-launchpad"
       caf_identity_aad_key = "cred_alz"
     }
     creation_policies = {
@@ -130,7 +130,7 @@ keyvaults = {
     sku_name                 = "standard"
     purge_protection_enabled = false
     tags = {
-      caf_environment      = "vcf_launchpad"
+      caf_environment      = "rha-launchpad"
       caf_identity_aad_key = "cred_connectivity"
     }
     creation_policies = {
@@ -157,7 +157,7 @@ keyvaults = {
     sku_name                 = "standard"
     purge_protection_enabled = false
     tags = {
-      caf_environment      = "vcf_launchpad"
+      caf_environment      = "rha-launchpad"
       caf_identity_aad_key = "cred_subscription_creation_platform"
     }
     creation_policies = {
@@ -184,7 +184,7 @@ keyvaults = {
     sku_name                 = "standard"
     purge_protection_enabled = false
     tags = {
-      caf_environment      = "vcf_launchpad"
+      caf_environment      = "rha-launchpad"
       caf_identity_aad_key = "cred_subscription_creation_landingzones"
     }
     creation_policies = {
@@ -211,7 +211,7 @@ keyvaults = {
     sku_name                 = "standard"
     purge_protection_enabled = false
     tags = {
-      caf_environment      = "vcf_launchpad"
+      caf_environment      = "rha-launchpad"
       caf_identity_aad_key = "cred_gitops"
     }
     creation_policies = {

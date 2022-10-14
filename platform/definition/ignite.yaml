@@ -11,13 +11,13 @@
 # 
 # 
 
-customer_name: VCF
-caf_environment: vcf_launchpad
+customer_name: Rover
+caf_environment: rha-launchpad
 default_email_address: rhadi.orange@gmail.com
-alz_mg_prefix: vcf
-alz_mg_name: VCF-ROOT
+alz_mg_prefix: rha
+alz_mg_name: RHAROOT
 azure_regions: {'region1': 'francecentral', 'region2': 'francesouth'}
-prefix: vcf
+prefix: rha
 
 # folder parameters
 topology_file: /tf/caf/platform/definition/ignite.yaml
@@ -53,21 +53,21 @@ naming_convention:
   inherit_tags: false
   # set: define the prefix to add to all resource names
   # unset: if passthrough is set to false, generate a random prefix
-  prefix: vcf
+  prefix: rha
   # if passthrough is set to false, add random suffix to name, up to the random_lenght value.
   random_length: 3
 
 caf_launchpad:
   # Subscription_id to deploy the launchpad. Note 1 existing manual subscription is required to deploy the launhchapd.
-  subscription_id: a9c7991e-521c-4532-93a9-5a37f82ccaed
-  subscription_name: PAYG Main Subscription
-  tenant_id: 482c21b6-ee9f-4d24-9bf0-6c9258fc2003
+  subscription_id: 52f4e128-3d23-4567-8900-a5c308f2284d
+  subscription_name: Subscription for OCB Professional Services
+  tenant_id: b72f77d3-93e0-4407-92fd-d336ab8e7199
   global_tags_propagated: yes
   tags:
     caf_deployment_mode: demo_single_subscription
 
 
-azuread_user_ea_account_owner: rhadi2005@rasboracafe.onmicrosoft.com
+azuread_user_ea_account_owner: rahmat.hadi@ocbps.onmicrosoft.com
 ea_owner_object_id: 
 
 azuread_identity_mode: service_principal
@@ -78,10 +78,10 @@ enable_azure_subscription_vending_machine: True
 
 management_groups:
   region1:
-    vcf:
-      management_group_prefix: "vcf"
-      management_group_name: "VCF-ROOT"
-      deploy_core_landing_zones: True
+    rha:
+      management_group_prefix: "rha"
+      management_group_name: "RHAROOT"
+      deploy_core_landing_zones: False
       clean_up_destination_folder: True
       update_lib_folder: True
       version_to_deploy: "v1.1.3"
@@ -98,7 +98,7 @@ billing_subscription_role_delegations:
   enable: false
   # Azure Active Directory User (UPN) that is Account Owner in the EA portal
   # if enable=false, set the upn of the user doing the manual deployment
-  azuread_user_ea_account_owner: rhadi2005@rasboracafe.onmicrosoft.com
+  azuread_user_ea_account_owner: rahmat.hadi@ocbps.onmicrosoft.com
   # see comments above to get the object_id
   #
   # Also set this GUID to the owner of the launchpad azuread_groups
@@ -110,21 +110,21 @@ billing_subscription_role_delegations:
 
 subscriptions:
   launchpad:  # Do not rename the key
-    name: PAYG Main Subscription
+    name: Subscription for OCB Professional Services
     create_alias: false 
-    subscription_id: a9c7991e-521c-4532-93a9-5a37f82ccaed
+    subscription_id: 52f4e128-3d23-4567-8900-a5c308f2284d
   identity:  # Do not rename the key
-    name: PAYG Main Subscription
+    name: Subscription for OCB Professional Services
     create_alias: false 
-    subscription_id: a9c7991e-521c-4532-93a9-5a37f82ccaed
+    subscription_id: 52f4e128-3d23-4567-8900-a5c308f2284d
   connectivity:  # Do not rename the key
-    name: PAYG Main Subscription
+    name: Subscription for OCB Professional Services
     create_alias: false 
-    subscription_id: a9c7991e-521c-4532-93a9-5a37f82ccaed
+    subscription_id: 52f4e128-3d23-4567-8900-a5c308f2284d
   management:  # Do not rename the key
-    name: PAYG Main Subscription
+    name: Subscription for OCB Professional Services
     create_alias: false 
-    subscription_id: a9c7991e-521c-4532-93a9-5a37f82ccaed
+    subscription_id: 52f4e128-3d23-4567-8900-a5c308f2284d
 
 deployments:
   platform:
@@ -138,7 +138,7 @@ deployments:
         asvm: asvm.yaml
     alz:
       region1:
-        vcf: alz.yaml
+        rha: alz.yaml
     scale_out_domains:
       region1:
         identity_level2:
@@ -183,7 +183,8 @@ backup_policies:
       name: vm-default-policy
       # Default to UTC
       # possible values - https://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/
-      timezone: SE Asia Standard Time
+      #timezone: SE Asia Standard Time
+      timezone: Romance Standard Time
       backup:
         frequency: Daily
         time: "23:00"
@@ -213,7 +214,7 @@ azure_landing_zones:
     # Set the Azure Active Directory tenant name (primary domain name)
     # has to be the default domain name (custom dns name or tenantname.onmicrosoft.com)
     # check the AAD property
-    tenant_name: rasboracafe.onmicrosoft.com
+    tenant_name: ocbps.onmicrosoft.com
     # only service_principal supported with rover ignite at the moment
     azuread_identity_mode: service_principal
     enable_azuread_groups: True

@@ -12,7 +12,7 @@ inherit_tags = false
 random_length = 3
 # Set the prefix that will be added to all azure resources.
 # if not set and passthrough=false, the CAF module generates a random one.
-prefix = "vcf"
+prefix = "rha"
 
 # Default region. When not set to a resource it will use that value
 default_region = "region1"

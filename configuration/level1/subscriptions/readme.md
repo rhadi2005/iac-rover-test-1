@@ -4,16 +4,16 @@ Set-up the subscription delegations for platform and landingzone subscriptions
 
 ```bash
 # For manual bootstrap:
-# Login to the subscription PAYG Main Subscription with the user rhadi2005@rasboracafe.onmicrosoft.com
-rover login -t rasboracafe.onmicrosoft.com -s a9c7991e-521c-4532-93a9-5a37f82ccaed
+# Login to the subscription Subscription for OCB Professional Services with the user rahmat.hadi@ocbps.onmicrosoft.com
+rover login -t ocbps.onmicrosoft.com -s 52f4e128-3d23-4567-8900-a5c308f2284d
 
 rover \
-  --impersonate-sp-from-keyvault-url https://vcf-kv-scp-ims.vault.azure.net/ \
+  --impersonate-sp-from-keyvault-url https://rha-kv-scp-kgj.vault.azure.net/ \
   -lz /tf/caf/landingzones/caf_solution \
   -var-folder /tf/caf/configuration/level1/subscriptions \
-  -tfstate_subscription_id a9c7991e-521c-4532-93a9-5a37f82ccaed \
+  -tfstate_subscription_id 52f4e128-3d23-4567-8900-a5c308f2284d \
   -tfstate platform_subscriptions.tfstate \
-  -env vcf_launchpad \
+  -env rha-launchpad \
   -level level1 \
   -p ${TF_DATA_DIR}/platform_subscriptions.tfstate.tfplan \
   -a plan

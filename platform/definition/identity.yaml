@@ -75,7 +75,8 @@ identity:
                   - Sunday
                   weeks:
                   - First
-                timezone: SE Asia Standard Time
+                #timezone: SE Asia Standard Time
+                timezone: Romance Standard Time
 
 
 # Bring here you existing active directory security groups.
