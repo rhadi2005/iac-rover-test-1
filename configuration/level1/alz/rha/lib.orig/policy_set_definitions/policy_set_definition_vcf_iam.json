@@ -1,0 +1,34 @@
+{
+    "name2": "vcf-audit-iam",
+    "type": "Microsoft.Authorization/policySetDefinitions",
+    "apiVersion": "2021-06-01",
+    "scope": null,
+    "properties": {
+      "policyType": "Custom",
+      "displayName": "VCF Audit IAM",
+      "description": "VCF Audit IAM",
+      "metadata": {
+        "version": "1.0.0",
+        "category": "General"
+      },
+      "parameters": {
+      },
+      "policyDefinitions": [
+        {
+          "policyDefinitionReferenceId": "Audit usage of custom RBAC rules",
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a451c1ef-c6ca-483d-87ed-f49761e3ffb5",
+          "parameters": {
+          },
+          "groupNames": []
+        },
+        {
+          "policyDefinitionReferenceId": "[Deprecated]: Custom subscription owner roles should not exist",
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/10ee2ea2-fb4d-45b8-a7e9-a2e770044cd9",
+          "parameters": {
+          },
+          "groupNames": []
+        }
+      ],
+      "policyDefinitionGroups": null
+    }
+  }

@@ -1,0 +1,23 @@
+ {
+    "name": "vcf-allowed-locs-assign",
+    "type": "Microsoft.Authorization/policyAssignments",
+    "apiVersion": "2019-09-01",
+    "properties": {
+        "displayName": "VCF Allowed locations assignment",
+        "description": "Allowed locations (global, West-europe)",
+        "notScopes": [],
+        "policyDefinitionId": "${current_scope_resource_id}/providers/Microsoft.Authorization/policyDefinitions/vcf-allowed-locations",
+        "scope": "${current_scope_resource_id}",
+        "enforcementMode": null,
+        "parameters": {
+            "listOfAllowedLocations": {
+              "value": ["westeurope"]
+            }
+        }
+    },
+    "location": "${default_location}",
+    "identity": {
+        "type": "None"
+    }
+  }
+             

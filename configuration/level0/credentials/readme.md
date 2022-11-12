@@ -1,5 +1,6 @@
 
 ### Generate launchpad credentials
+#   OK GIT PUSH
 
 ```bash
 # For manual bootstrap:
@@ -16,7 +17,21 @@ rover \
   -launchpad \
   -env rha-launchpad \
   -level level0 \
-  -p ${TF_DATA_DIR}/launchpad_credentials.tfstate.tfplan \
+  -p ${TF_DATA_DIR}/launchpad_credentials.tfplan \
+  -a plan
+
+## sans -launchpad
+  -launchpad \
+
+rover \
+  -lz /tf/caf/landingzones/caf_solution \
+  -var-folder /tf/caf/configuration/level0/credentials \
+  -tfstate_subscription_id 52f4e128-3d23-4567-8900-a5c308f2284d \
+  -target_subscription 52f4e128-3d23-4567-8900-a5c308f2284d \
+  -tfstate launchpad_credentials.tfstate \
+  -env rha-launchpad \
+  -level level0 \
+  -p ${TF_DATA_DIR}/launchpad_credentials.tfplan \
   -a plan
 
 ```
@@ -37,7 +52,7 @@ rover \
   -launchpad \
   -env rha-launchpad \
   -level level0 \
-  -p ${TF_DATA_DIR}/launchpad_credentials.tfstate.tfplan \
+  -p ${TF_DATA_DIR}/launchpad_credentials.tfplan \
   -a apply
 
 ```

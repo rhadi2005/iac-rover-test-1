@@ -53,7 +53,8 @@ resource "azurerm_management_group_policy_assignment" "allowedlocation" {
   enforce      = false
 
   parameters = jsonencode(
-    { "listOfAllowedLocations" : {
+    {
+      "listOfAllowedLocations" : {
       "value" : ["francecentral", "francesouth"] }
   })
 

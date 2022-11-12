@@ -1,0 +1,22 @@
+{
+    "vcf-platform": {
+        "policy_assignments": [
+            "vcf-audit-iam-assignment",
+            "vcf-allowed-locs-assign"
+        ],
+        "policy_definitions": [
+            "vcf-allowed-locations"
+        ],
+        "policy_set_definitions": [
+            "vcf-audit-iam"
+        ],
+        "role_definitions": [
+        ],
+        "archetype_config": {
+            "parameters": {
+            },
+            "access_control": {
+            }
+        }
+    }
+}

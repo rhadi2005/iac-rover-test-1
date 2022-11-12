@@ -39,12 +39,75 @@ rover \
   -var-folder /tf/caf/configuration/level0/launchpad \
   -tfstate_subscription_id 52f4e128-3d23-4567-8900-a5c308f2284d \
   -target_subscription 52f4e128-3d23-4567-8900-a5c308f2284d \
-  -tfstate caf_launchpad.tfstate \
+  -tfstate launchpad.tfstate \
   -launchpad \
   -env rha-launchpad \
   -level level0 \
-  -p ${TF_DATA_DIR}/caf_launchpad.tfstate.tfplan \
+  -p ${TF_DATA_DIR}/launchpad.tfstate.tfplan \
   -a plan
+
+rover \
+  -lz /tf/caf/landingzones/caf_launchpad \
+  -var-folder /tf/caf/configuration/level0/launchpad \
+  -tfstate_subscription_id 52f4e128-3d23-4567-8900-a5c308f2284d \
+  -target_subscription 52f4e128-3d23-4567-8900-a5c308f2284d \
+  -tfstate launchpad.tfstate \
+  -p ${TF_DATA_DIR}/launchpad.tfplan \
+  -launchpad \
+  -env rha-launchpad \
+  -level level0 \
+  -a plan
+
+rover \
+  -lz /tf/caf/landingzones/caf_launchpad \
+  -var-folder /tf/caf/configuration/level0/launchpad \
+  -tfstate_subscription_id 52f4e128-3d23-4567-8900-a5c308f2284d \
+  -target_subscription 52f4e128-3d23-4567-8900-a5c308f2284d \
+  -tfstate launchpad.tfstate \
+  -launchpad \
+  -env rha-launchpad \
+  -level level0 \
+  -a plan
+
+
+rover \
+  -lz /tf/caf/landingzones/caf_launchpad \
+  -var-folder /tf/caf/configuration/level0/launchpad \
+  -tfstate_subscription_id 52f4e128-3d23-4567-8900-a5c308f2284d \
+  -target_subscription 52f4e128-3d23-4567-8900-a5c308f2284d \
+  -tfstate launchpad.tfstate \
+  -launchpad \
+  -env rha-launchpad \
+  -level level0 \
+  -a 'state list'
+
+rover \
+  -lz /tf/caf/landingzones/caf_launchpad \
+  -var-folder /tf/caf/configuration/level0/launchpad   \
+  -tfstate_subscription_id 52f4e128-3d23-4567-8900-a5c308f2284d \
+  -target_subscription 52f4e128-3d23-4567-8900-a5c308f2284d \
+  -tfstate launchpad.tfstate \
+  -launchpad \
+  -env rha-launchpad \
+  -level level0 \
+  -a 'state show' \
+  -id 'module.launchpad.module.keyvaults["level1"].azurecaf_name.keyvault'
+
+rover \
+  -lz /tf/caf/landingzones/caf_launchpad \
+  -var-folder /tf/caf/configuration/level0/launchpad   \
+  -tfstate_subscription_id 52f4e128-3d23-4567-8900-a5c308f2284d \
+  -target_subscription 52f4e128-3d23-4567-8900-a5c308f2284d \
+  -tfstate launchpad.tfstate \
+  -launchpad \
+  -env rha-launchpad \
+  -level level0 \
+  -a 'state rm' \
+  -id 'module.launchpad.module.keyvaults["level0"].azurecaf_name.keyvault'
+
+
+terraform state show -state=/home/vscode/.terraform.cache/rha-launchpad/tfstates/level0/tfstate/launchpad.tfstate  'module.launchpad.module.keyvaults["level0"].azurecaf_name.keyvault'
+
 
 ```
 

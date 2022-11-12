@@ -1,7 +1,7 @@
 role_mapping = {
   built_in_role_mapping = {
     management_group = {
-      "root" = {
+      "rha-root" = {
         "User Access Administrator" = {
           azuread_groups = {
             keys = ["level0"]

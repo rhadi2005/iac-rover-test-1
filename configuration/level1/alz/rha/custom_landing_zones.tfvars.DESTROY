@@ -2,9 +2,31 @@ custom_landing_zones = {
 
   #data.azurerm_management_group.rha-root
 
+  LAZ-VCF-UY2fQ = {
+    display_name               = "LAZ-VCF MG with uppercase id"
+    
+    #"/providers/Microsoft.Management/managementGroups/rha-root"
+    #parent_management_group_id = "/providers/Microsoft.Management/managementGroups/f345ddf7-a422-488c-92d4-405370223575"
+
+    # set parent id to null = var.parent_root_id
+    parent_management_group_id = null
+    archetype_config = {
+      archetype_id   = "vcf-platform"
+      parameters     = {}
+      access_control = {}
+    }
+    subscriptions = {}
+    subscription_ids = [
+    ]
+  }
+
   rha-corp = {
     display_name               = "Corp"
-    parent_management_group_id = "not-available"
+    #"/providers/Microsoft.Management/managementGroups/rha-root"
+    #parent_management_group_id = "/providers/Microsoft.Management/managementGroups/f345ddf7-a422-488c-92d4-405370223575"
+
+    # set parent id to null = var.parent_root_id
+    parent_management_group_id = null
     archetype_config = {
       archetype_id   = "default_empty"
       parameters     = {}
@@ -12,15 +34,15 @@ custom_landing_zones = {
     }
     subscriptions = {}
     subscription_ids = [
-
     ]
   }
 
   rha-online = {
     display_name               = "Online"
-    parent_management_group_id = "rha-root"
+    # set parent id to null = var.parent_root_id
+    parent_management_group_id = null
     archetype_config = {
-      archetype_id   = "default_empty"
+      archetype_id   = "vcf-platform"
       parameters     = {}
       access_control = {}
     }

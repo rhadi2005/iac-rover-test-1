@@ -1,15 +1,19 @@
 # naming convention settings
 # for more settings on naming convention, please refer to the provider documentation: https://github.com/aztfmod/terraform-provider-azurecaf
 #
+
 # passthrough means the default CAF naming convention is not applied and you are responsible
 # of the unicity of the names you are giving. the CAF provider will clear out
 passthrough = false
+
 # adds random chars at the end of the names produced by the provider
 # Do not change the following values once the launchpad deployed.
+# When passthrough is set to false, define the number of random characters to add to the names
+random_length = 0
+
 # Enable tag inheritance (can be changed)
 inherit_tags = false
-# When passthrough is set to false, define the number of random characters to add to the names
-random_length = 3
+
 # Set the prefix that will be added to all azure resources.
 # if not set and passthrough=false, the CAF module generates a random one.
 prefix = "rha"
@@ -29,7 +33,9 @@ launchpad_key_names = {
   tfstates = [
     "level0",
     "level1",
-    "level2"
+    "level2",
+    "level3",
+    "level4"
   ]
 }
 
